@@ -1,0 +1,108 @@
+/* Tela inicial do Conversas: sem os cartões (reuniões, menções, lembretes);
+ * no lugar, a logo do Empresa Exemplo e os atalhos dos aplicativos. */
+.talk-dashboard__items {
+	display: none !important;
+}
+
+/* Botões antigos da tela inicial (reunião, grupo, entrar na conversa, verificar dispositivos) */
+.talk-dashboard__actions {
+	display: none !important;
+}
+
+.talk-dashboard__menu .app-nova-conversa {
+	display: block !important;
+	width: min(520px, calc(100% - 32px)) !important;
+	height: auto !important;
+	margin: 28px auto 0 !important;
+	padding: 18px 20px !important;
+	border: 0 !important;
+	border-radius: 18px !important;
+	background: #2563eb !important;
+	color: #000 !important;
+	font-size: 22px !important;
+	font-weight: 700 !important;
+	text-align: center !important;
+	cursor: pointer;
+	box-shadow: 0 4px 14px rgba(0, 235, 89, .35) !important;
+}
+
+.talk-dashboard__menu .app-nova-conversa:hover {
+	filter: brightness(.93);
+}
+
+.app-inicio {
+	margin: 36px auto 24px;
+	max-width: 760px;
+	padding: 0 16px;
+}
+
+.app-logo {
+	height: 110px;
+	margin: 0 auto 36px;
+	background: url('../img/PLACEHOLDER-LOGO.png') center / contain no-repeat;
+}
+
+body[data-theme-dark] .app-logo {
+	background-image: url('../img/PLACEHOLDER-LOGO.png');
+}
+
+@media (prefers-color-scheme: dark) {
+	body[data-theme-default] .app-logo {
+		background-image: url('../img/PLACEHOLDER-LOGO.png');
+	}
+}
+
+.app-atalhos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 18px 14px;
+}
+
+.app-atalho {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100px;
+	text-decoration: none;
+	color: var(--color-main-text);
+	border-radius: 14px;
+	padding: 6px 4px;
+}
+
+.app-atalho:hover {
+	background: var(--color-background-hover, rgba(128, 128, 128, .15));
+}
+
+.app-atalho__icone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	background: rgba(0, 235, 89, .22);
+}
+
+.app-atalho__marca {
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-color: var(--color-main-text);
+	-webkit-mask: center / contain no-repeat;
+	mask: center / contain no-repeat;
+}
+
+.app-atalho__nome {
+	margin-top: 8px;
+	font-size: 13px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 1.25;
+}
+
+/* Ícone "+" da lista de conversas (criar conversa / conversas abertas / ligar para telefone):
+ * a criação de conversa fica só nos botões "Nova conversa" do alto e da tela inicial. */
+.new-conversation .action-item:has(.chat-plus-outline-icon) {
+	display: none !important;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>mobile_installer</id>
+	<name>Empresa Exemplo – Instalar app</name>
+	<summary>Botão e instruções para instalar o Empresa Exemplo Chat no celular</summary>
+	<description>Mostra na tela de login um botão para instalar o app Empresa Exemplo Chat (Android e iPhone), com o passo a passo.</description>
+	<version>1.5.3</version>
+	<licence>agpl</licence>
+	<author>Empresa Exemplo</author>
+	<namespace>MobileInstaller</namespace>
+	<category>customization</category>
+	<dependencies>
+		<nextcloud min-version="35" max-version="40"/>
+	</dependencies>
+</info>
